@@ -28,10 +28,10 @@ namespace HardkorowyKodsu
             return Host.CreateDefaultBuilder()
                 .ConfigureServices((context, services) => {
                     services.AddSingleton(context.Configuration);
-                    services.AddTransient<MainView>();
-                    services.AddTransient<IDbApiService, DbApiService>();
+                    services.AddSingleton<MainView>();
+                    services.AddSingleton<IDbApiService, DbApiService>();
                     var endPoint = context.Configuration["ApiEndpoint"];
-                    services.AddTransient(_ => RestClient.For<IDbApiProxy>(endPoint));
+                    services.AddSingleton(_ => RestClient.For<IDbApiProxy>(endPoint));
 
 
                 });

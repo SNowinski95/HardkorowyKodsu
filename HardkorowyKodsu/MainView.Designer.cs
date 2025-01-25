@@ -44,6 +44,7 @@
             // 
             // ReloadButton
             // 
+            ReloadButton.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             ReloadButton.Location = new Point(624, 12);
             ReloadButton.Name = "ReloadButton";
             ReloadButton.Size = new Size(164, 75);
@@ -54,7 +55,7 @@
             // 
             // label2
             // 
-            label2.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            label2.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             label2.AutoSize = true;
             label2.Font = new Font("Segoe UI", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label2.Location = new Point(225, 0);
@@ -65,6 +66,7 @@
             // 
             // label1
             // 
+            label1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label1.Location = new Point(45, 0);
@@ -75,6 +77,7 @@
             // 
             // panel1
             // 
+            panel1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
             panel1.Controls.Add(ViewList);
             panel1.Controls.Add(TableList);
             panel1.Controls.Add(label1);
@@ -86,24 +89,27 @@
             // 
             // ViewList
             // 
+            ViewList.Anchor = AnchorStyles.Top | AnchorStyles.Bottom;
             ViewList.FormattingEnabled = true;
-            ViewList.Location = new Point(188, 35);
+            ViewList.Location = new Point(172, 35);
             ViewList.Name = "ViewList";
-            ViewList.Size = new Size(160, 379);
+            ViewList.Size = new Size(176, 379);
             ViewList.TabIndex = 7;
             ViewList.Click += List_Click;
             // 
             // TableList
             // 
+            TableList.Anchor = AnchorStyles.Top | AnchorStyles.Bottom;
             TableList.FormattingEnabled = true;
             TableList.Location = new Point(3, 35);
             TableList.Name = "TableList";
-            TableList.Size = new Size(160, 379);
+            TableList.Size = new Size(163, 379);
             TableList.TabIndex = 6;
             TableList.Click += List_Click;
             // 
             // panel2
             // 
+            panel2.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             panel2.Controls.Add(ColumnList);
             panel2.Controls.Add(label3);
             panel2.Location = new Point(369, 12);
@@ -113,6 +119,7 @@
             // 
             // ColumnList
             // 
+            ColumnList.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             ColumnList.Enabled = false;
             ColumnList.FormattingEnabled = true;
             ColumnList.Location = new Point(3, 35);
@@ -123,7 +130,7 @@
             // 
             // label3
             // 
-            label3.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            label3.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             label3.AutoSize = true;
             label3.Font = new Font("Segoe UI", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label3.Location = new Point(72, 0);

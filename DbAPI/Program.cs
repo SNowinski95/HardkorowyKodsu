@@ -7,8 +7,8 @@ var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddControllers();
 builder.Services.AddSingleton<IConfiguration>(builder.Configuration);
-builder.Services.AddTransient<IDbContext, DbContext>();
-builder.Services.AddTransient<ITableRepository, TableRepository>();
+builder.Services.AddScoped<IDbContext, DbContext>();
+builder.Services.AddScoped<ITableRepository, TableRepository>();
 var app = builder.Build();
 app.UseHttpsRedirection();
 app.MapControllers();
