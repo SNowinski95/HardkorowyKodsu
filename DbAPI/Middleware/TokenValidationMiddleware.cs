@@ -18,9 +18,7 @@ namespace DbAPI.Middleware
             ArgumentNullException.ThrowIfNull(configuration);
             var logger = context.RequestServices.GetService<ILogger<TokenValidationMiddleware>>();
             ArgumentNullException.ThrowIfNull(logger);
-            //token should be store more secure eg. in DB but for this task i want to be flexible for any DB
             var token = configuration["Token"];
-            //validate configuration
             if(string.IsNullOrEmpty(token))
             {
                 logger.LogError("Innocrect configuration file");
