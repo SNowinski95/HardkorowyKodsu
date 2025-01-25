@@ -1,4 +1,6 @@
 Kilka słów komentarza:
+
+
 Projekt nie zawiera testów jednostkowy z powodów iż nie widzę tam logiki biznesowej, która by tego wymagała, z tego też powodu nie jest dodana również żadna warstwa serwisowa.
 Z powodu charakteru zadania nie zastosowałem frameworka bazodanowego (EF core/nHibernate) a jedynie maper bazodanowy (dapper).
 Logowanie zostało zaimplementowane jedynie po stronie API, prawdopodobnie dobrym pomysłem byłoby dodanie go również po stronie klienta, jednak nie jest to tak samo istotne jak w przypadku API, które może zostać za hostowane w wielu instancjach, co ułtwia diagnozowanie błędu.
