@@ -151,9 +151,6 @@
         }
 
         #endregion
-
-        private ListView listView1;
-        private ListView listView2;
         private Button ReloadButton;
         private Label label2;
         private Label label1;

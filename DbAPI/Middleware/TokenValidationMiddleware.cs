@@ -27,9 +27,8 @@ namespace DbAPI.Middleware
                 context.Response.StatusCode = (int)HttpStatusCode.InternalServerError;
                 await context.Response.WriteAsync("Invalid server configuration");
             }
-            else if (context.Request.Headers.ContainsKey("Token") && token == context.Request.Headers["Token"])
+            else if (context.Request.Headers.TryGetValue("Token", out Microsoft.Extensions.Primitives.StringValues value) && token == value)
             {
-                logger.LogInformation("Validate request come from {Host}", context.Request.Host);
                 validToken = true;
             }
 
@@ -37,7 +36,7 @@ namespace DbAPI.Middleware
             {
                 context.Response.StatusCode = (int)HttpStatusCode.Forbidden;
                 await context.Response.WriteAsync("Invalid Token");
-                logger.LogWarning("Invalidate request come from {Host}", context.Request.Host);
+                logger.LogWarning("Invalidate request appear");
             }
             else
             {
