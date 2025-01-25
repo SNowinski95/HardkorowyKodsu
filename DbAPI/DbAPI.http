@@ -1,0 +1,16 @@
+@DbAPI_HostAddress = http://localhost:5049
+
+GET {{DbAPI_HostAddress}}/Table/GetTables
+Accept: application/json
+Token: MyUltraSecureTokenThatShouldBeStoredSafely
+
+###
+GET {{DbAPI_HostAddress}}/Table/GetViews
+Accept: application/json
+Token: MyUltraSecureTokenThatShouldBeStoredSafely
+
+###
+GET {{DbAPI_HostAddress}}/Table/GetColumns/address
+Accept: application/json
+Token: MyUltraSecureTokenThatShouldBeStoredSafely
+###
