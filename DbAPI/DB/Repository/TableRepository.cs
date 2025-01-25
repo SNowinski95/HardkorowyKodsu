@@ -2,7 +2,6 @@
 using DbAPI.DB.Models;
 using DbAPI.DB.Repository.Interfaces;
 using MySql.Data.MySqlClient;
-using System.Collections.Generic;
 
 namespace DbAPI.DB.Repository
 {

@@ -1,12 +1,5 @@
 ﻿using HardkorowyKodsu.Models;
-using Microsoft.Extensions.Logging;
-using Microsoft.VisualBasic.ApplicationServices;
 using RestEase;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace HardkorowyKodsu.Proxy
 {

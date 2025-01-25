@@ -1,5 +1,4 @@
 using HardkorowyKodsu.Services.Interfaces;
-using System.Threading.Tasks;
 
 namespace HardkorowyKodsu
 {
@@ -54,16 +53,8 @@ namespace HardkorowyKodsu
             }
             
             ColumnList.Items.Clear();
-            try
-            {
-                var columns = await _dbApiService.GetColumnsAsync(tableName);
-                ColumnList.Items.AddRange(columns.ToArray());
-            }
-            catch (Exception ex)
-            {
-                
-            }
-            
+            var columns = await _dbApiService.GetColumnsAsync(tableName);
+            ColumnList.Items.AddRange(columns.ToArray());
         }
     }
 }

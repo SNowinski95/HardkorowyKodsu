@@ -1,7 +1,6 @@
 using DbAPI.DB.Models;
 using DbAPI.DB.Repository.Interfaces;
 using Microsoft.AspNetCore.Mvc;
-using MySql.Data.MySqlClient;
 
 namespace DbAPI.Controllers
 {
